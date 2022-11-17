@@ -1,0 +1,367 @@
+GIT :-
+---------------
+Global information tracker
+
+Introduction to git :-
+-----------------------------
+Git is Distrubuted version control system
+
+
+version control system:-
+----------------------------
+A version control system is a system that maintains differnet versions of our project 
+when we work in a team or an individual as the project progresses , new features get added to it so
+a version control system maintans all the differnet versions of our project and we can roll back 
+to any version we want without causing any trouble to our software 
+
+And easily we can mainatin differnt versions of our project by giving names like 
+project, projectfeature1, projectfeature2
+
+
+Instagram :
+-----------------
+signup
+login
+profile
+upload
+story
+message
+reels
+
+Release-1/version 1 
+--------------
+signup
+login                  ROLL BACK  Version one 
+
+profile
+upload
+
+version2 
+-----------------
+story
+
+ROLL BACK 
+
+Version 3:
+--------------
+Message
+
+version -4 :
+------------------
+Reels
+
+Types of version control system :
+----------------------------------------
+1.local version control system(LVCS)
+2.centarlized version control system (CVCS)
+3.Dirtubuted version control system (DVCS)
+
+1.local version control system(LVCS):
+------------------------------------------
+what ever the code written by the developers they will be storing the source code in 
+local version control system(LVCS)
+
+
+Drawback :-
+--------------
+If anything crashes/disaster happens to the system at that time we will be not having the source 
+code 
+
+Overcome the drawback of our local version control system we have centralized version control
+system 
+
+
+2.Centralized version control system:
+-------------------------------------- 
+the developers what they are writting the code they need to connect with the central repo
+then they need to push the code at end of the day
+
+and again when they come back they need pull the code  
+
+Tool :- Subversion 
+
+Drawback :-
+----------------
+1.Intrenet connection is required 
+2.If any thing happens to the central repo the complete source code will be lost
+
+To ourcome the drawbacks of our central repo we came up with new vcs called 
+
+3.Distrubuted version control system :
+-------------------------------------- 
+Distrubuted version control system means every collaboraters needs to add the source code to the 
+remote repo 
+
+Git Repository structure :
+--------------------------------
+
+It consist of 4 parts 
+
+1.working directory
+2.staging area(index)
+3.Local Repository
+4.central Repository
+
+1.Working directory:
+---------------------------
+This is our local directory where we make the project (writting the code) and make changes to it.
+
+2.Staging area(index):
+----------------------------
+This is a an area where we first needs to put our project before comminting . this is used for
+code review by other team members ....
+
+3.Local Repository :
+--------------------------------
+This is our local repositroy where we commit changes to project before pushing them to the 
+central/remote repo on github , this is what is provided by the distibuted version control system 
+  
+.git :- is the local repo 
+
+4.central/remote Repository :-
+------------------------------
+This is the main project on the central server , a copy of which is with every team memebrs as a
+local repository ..
+
+
+History of git :
+---------------------
+Git was originally authored by linus torvalds in 2005 ..
+
+Installing git :
+-------------------------
+step 1 :- open the browser
+
+step 2 :- search for git 
+
+step 3 :- choose https://git-scm.com/ 
+
+step 4 :- click on git downloads for windows 
+
+step 5 :- https://github.com/git-for-windows/git/releases/download/v2.38.1.windows.1/Git-2.38.1-64-bit.exe
+
+step 6 :- Install the git 
+
+step 7 :- configure ...
+
+gitlab
+Github :
+------------------------
+Github is basically a for profit company owned by microsoft , which hosts git repositorys online
+
+-> It helps user share their git repository online with other users , or access it remotly
+you can also host a public repo for free on github...
+
+Creating Github account :
+-------------------------------
+step 1 :- open the browser
+
+step 2 :- enter gothub.com & click on signup
+
+step 3 :- provide ur mail-id & create a password, user-name 
+
+step 4 :- choose the justme, student, free account ..
+
+
+Creating github repo :
+------------------------------
+step 1 :- open browser and choose github.com
+
+step 2 :- click on addition sign dropdown and choose new repository 
+
+step 3 :-add the repo name & choose public , click on create repository
+
+To start working with repository we will be having 2 options 
+1.by creating repository in local
+2.Creating reppositroy in github 
+
+1.stage :- 
+working directory we have created the file
+
+touch <file-name>
+
+2.stage :
+We need to add the file to staging area
+
+git add <file-name>
+ 
+3.stage :-
+we need to add the changes to local repo
+
+git config --global user.name "user-name"
+
+git config --global user.email "user-email"
+
+git commit -m "msg"
+
+git log :-
+4.stage :-
+
+
+
+git config --global user.name "user-name"
+
+git config --global user.email "user-email"
+
+
+1.mkdir <dir>
+
+2.cd <dir>
+
+3.git clone <url>
+
+4.touch <file>
+
+5.git add .
+
+6.git config --global user.name "user-name"
+
+7.git config --global user.email "user-email"
+
+8
+
+
+
+commands :
+------------------
+1.git clone <url> :- copy the remote repo to local 
+
+2.cd <repo-name >
+
+3.touch <file-name> :- it is used create the files
+
+4.git status :- it is used check the statis of our branch
+
+5.git add <file-name> or git add . :- It is used to the changes to staging area
+
+6.git config --global user.name "user-name"
+
+7.git config --global user.email "user-email"
+
+8.git commit -m "msg" :- to add the files to local repo from staging area
+
+9.git log :- which is used to check the commit history
+
+10.
+
+Git reset & git revert
+
+
+Git reset :-
+---------------
+we can undo the file changes 
+we can undo the commit changes 
+
+working directory :
+--------------------------
+
+file1, file2 , file3, file4 
+
+
+staging area :-
+------------------
+git add .
+
+git reset 
+
+sceanrio :
+-----------------
+while working singup,login,cart 
+
+while working in the cart feature without completeing i have added files to local repo(commit)
+but i want to remove the commit which i have by mistakly added 
+
+git reset head~1
+
+git reset head~2
+
+2 options :-
+----------------
+git reset --soft head~1:- add the files back to stagging area
+
+git reset --hard head~1
+
+git reset --mixed head~1
+
+drawback :- 
+----------------
+we can't able to delete the specific commit to ourcome the drawback we are having git revert..
+
+
+
+Git revert;-
+To delete the the specific commit
+--------------------
+git revert <commit-id>
+
+editor to come out :- 
+
+step 1 :- i
+
+step 2 :- esc+:
+
+step 3 :- wq click on enter
+
+-------------------------------------------------------------
+Git branching :
+-----------------------
+consider a tree 
+
+for tree we will be having branches right 
+
+by using brnaches grow leaves and fruits 
+
+
+Repoistory(main/master):- dev & test
+
+Folder :- if 10 members are working 
+
+for 1 person i will create one folder 
+
+For each and every team memeber we will create the branches in that branch they need to work 
+
+Whatsapp :-
+------------------
+chats :- dev1
+calls :-dev2 
+status :- dev3
+payment :- dev4
+settings :- dev5
+
+
+How to create the branch :
+---------------------------------
+1.git branch <branch-name> :- to create the branch
+
+2.git branch :- it is used list the branches 
+
+3.git checkout <branch> :- To change the branch  
+
+what ever the changes i have added into the *chats* branch will be not added to the *main* branch
+but i want to add the changes to main branch why because main is a parent branch 
+
+Adding the changes of chats branch to main :
+-----------------------------------------------
+step 1 :- change branch to main
+
+step 2 :- git checkout main
+
+step 3 :- git merge chats
+
+----------------------------------------------------
+git rebase :- it is also used to add the changes from 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
